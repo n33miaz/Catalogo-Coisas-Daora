@@ -52,19 +52,24 @@ document.addEventListener("DOMContentLoaded", function () {
     function exibirFilmes() {
         const container = document.getElementById("filmes");
 
+        // limpa o conteúdo atual do contaneir
         container.innerHTML = "";
 
+        // loop para percorrer a lista de filmes
         for (let i = 0; i < listaFilmes.length; i++) {
             if (verificacao.test(listaFilmes[i].link)) {
+                // criação de elementos HTML dinamicamente
                 const filme = document.createElement("div");
                 filme.classList.add("filme");
 
                 const paragrafo = document.createElement("p");
                 const imagem = document.createElement("img");
 
+                // atribuição de valores aos elementos criados
                 paragrafo.textContent = listaFilmes[i].nome;
                 imagem.src = listaFilmes[i].link;
 
+                // adiciona os elementos ao DOM
                 filme.appendChild(paragrafo);
                 filme.appendChild(imagem);
                 container.appendChild(filme);
@@ -74,22 +79,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // função para exibir as músicas na tela
     function exibirMusicas() {
         const container = document.getElementById("musicas");
 
+        // limpa o conteúdo atual do contaneir
         container.innerHTML = "";
 
+        // loop para percorrer a lista de musicas
         for (let i = 0; i < listaMusicas.length; i++) {
             if (verificacao.test(listaMusicas[i].link)) {
+                // criação de elementos HTML dinamicamente
                 const musica = document.createElement("div");
                 musica.classList.add("musica");
 
                 const paragrafo = document.createElement("p");
                 const imagem = document.createElement("img");
 
+                // atribuição de valores aos elementos criados
                 paragrafo.textContent = listaMusicas[i].nome;
                 imagem.src = listaMusicas[i].link;
 
+                // adiciona os elementos ao DOM
                 musica.appendChild(paragrafo);
                 musica.appendChild(imagem);
                 container.appendChild(musica);
@@ -99,8 +110,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // variáveis globais para os elementos DOM
     let filmesContainer, musicasContainer, tituloFilmes, tituloMusicas;
 
+    // função para obter os elementos DOM
     function obterElementos() {
         filmesContainer = document.getElementById("filmes");
         musicasContainer = document.getElementById("musicas");
@@ -108,15 +121,18 @@ document.addEventListener("DOMContentLoaded", function () {
         tituloMusicas = document.getElementById("titulo-musicas");
     }
 
+    // função para trocar a coleção entre filmes e músicas
     function trocarColecao() {
         obterElementos();
 
         if (filmesContainer && musicasContainer && tituloFilmes && tituloMusicas) {
             if (filmesContainer.style.display !== "none") {
+                // oculta elementos de filmes e exibe elementos de músicas
                 ocultarElementos(filmesContainer, tituloFilmes);
                 exibirElementos(musicasContainer, tituloMusicas);
                 exibirMusicas();
             } else {
+                // oculta elementos de filmes e exibe elementos de filmes
                 exibirElementos(filmesContainer, tituloFilmes);
                 ocultarElementos(musicasContainer, tituloMusicas);
                 exibirFilmes();
@@ -124,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // função para ocultar elementos
     function ocultarElementos(container, titulo) {
         if (container && titulo) {
             container.style.display = "none";
@@ -131,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // função para exibir elementos
     function exibirElementos(container, titulo) {
         if (container && titulo) {
             container.style.display = "flex";
@@ -138,12 +156,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // evento de clique no botão para trocar a coleção
     const btnTrocarColecao = document.getElementById("btnTrocarColecao");
 
     btnTrocarColecao.addEventListener("click", function () {
         trocarColecao();
     });
 
+    // inicializa a obtenção dos elementos DOM e exibe os filmes ao carregar a página
     obterElementos();
     exibirFilmes();
 });
