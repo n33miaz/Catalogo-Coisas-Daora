@@ -1,0 +1,80 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/826/524/865/3-316-16-9-aspect-ratio-s-sfw-wallpaper-preview.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #fff;
+}
+
+button {
+    font-family: "Roboto Mono", monospace;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#filmes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.filme {
+    text-align: center;
+    margin: 10px;
+}
+
+.filme>img {
+    max-height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.filme>p {
+    width: 175px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+#titulo-musicas {
+    display: none;
+}
+
+#musicas {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.musica {
+    text-align: center;
+    margin: 10px;
+}
+
+.musica>img {
+    max-height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.musica>p {
+    width: 175px;
+    color: #fff;
+    margin: 10px 0;
+}
