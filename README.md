@@ -3,7 +3,7 @@
 Este projeto é parte da 3ª aula do evento "Imersão Dev" da Alura, onde desenvolvemos um catálogo interativo para exibir filmes e músicas. O objetivo é praticar conceitos de manipulação do DOM, criação dinâmica de elementos HTML e interação com o usuário.
 
 **Link dos Outros Projetos:**
-- 1º aula:
+- 1º aula: [Conversor Celestial](https://github.com/n33miaz/Conversor-Celestial)
 - 2º aula: [Desafio do Número Secreto](https://github.com/n33miaz/Desafio-do-Numero-Secreto)
 - 3º aula: [Coisas Daora](https://github.com/n33miaz/Coisas-Daora)
 - 4º aula:
